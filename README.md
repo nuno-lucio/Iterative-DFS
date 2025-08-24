@@ -13,32 +13,24 @@ This project implements an **iterative DFS** (Depth-First Search).
 ---
 
 ## Input Format
-The program reads a graph in **adjacency list format**:
+The program reads a 0 indexed graph in **adjacency list format**:
 ```
-numberOfVertices numberOfVerticesWithAdjacencies
+numberOfVertices numberOfVerticesWithAdjacencies isDirectedGraph(1/0)
 
-vertexID Degree
-
-neighbor1 neighbor2 ...
+vertexID Degree neighbor1 neighbor2 ...
 
 ...
 ```
 
 ### Example
 ```
-8 6
-0 1
-2
-1 2
-2 5
-2 2
-0 6
-4 2
-6 7
-5 1
-6
-6 2
-2 5
+8 6 1
+0 1 2
+1 2 2 5
+2 2 0 6
+4 2 6 7
+5 1 6
+6 2 2 5
 ```
 ![Example DFS](https://github.com/nuno-lucio/Iterative-DFS/raw/master/examples/example_graph.png)
 
@@ -46,7 +38,7 @@ neighbor1 neighbor2 ...
 
 ## Build
 ```
-g++ -std=c++11 -O3 -Wall DFS.cpp -o DFS
+g++ -std=c++11 -O3 -Wall main.cpp -o DFS
 ```
 
 ---
